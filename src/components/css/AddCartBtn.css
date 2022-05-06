@@ -1,0 +1,8 @@
+.container-cart-btn {
+  display: flex;
+  justify-content: center;
+}
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+}
