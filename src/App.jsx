@@ -1,7 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import Basket from "./components/Basket";
 function App() {
   return (
     <div className="App">
@@ -12,3 +11,23 @@ function App() {
 }
 
 export default App;
+
+{/*import React, { Component } from 'react'
+
+export class App extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       basket:[]
+    }
+  }
+  render() {
+    return (
+      <div>App</div>
+    )
+  }
+}
+
+export default App*/}
+
