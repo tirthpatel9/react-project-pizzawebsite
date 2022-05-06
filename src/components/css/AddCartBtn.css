@@ -4,5 +4,16 @@
 }
 .add-to-cart-btn {
   display: flex;
+  width: 90%;
+  margin: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+}
+.leftSide {
+  display: flex;
   align-items: center;
 }
+
