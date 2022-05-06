@@ -5,7 +5,11 @@ function Basket() {
   return (
     <div className="container-basket">
       <h2>Your Basket</h2>
-      <p>Your basket looks a little empty. Start adding food from our menu.</p>
+      <div className="basket-items">
+        <p>
+          Your basket looks a little empty. Start adding food from our menu.
+        </p>
+      </div>
     </div>
   );
 }
