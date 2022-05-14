@@ -8,4 +8,5 @@
 .container-menu {
   border-right: 1px solid grey;
   grid-column: 1 / 3;
+  grid-row: 2 / 3;
 }
