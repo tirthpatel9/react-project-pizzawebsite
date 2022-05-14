@@ -14,32 +14,3 @@ function MenuItem({ item, onAdd }) {
 }
 
 export default MenuItem;
-
-/*export class MenuItem extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      basket: "",
-    };
-  }
-
-  
-  addToCart = (event) => {
-    console.log(event);
-  };
-
-  render() {
-    const { name, desc, price, image } = this.props;
-    return (
-      <div className="menuItem">
-        <img src={image} alt="pizzapic" />
-        <h3>{name}</h3>
-        <p>{desc}</p>
-        <AddCartBtn price={price} onClickAdd={this.addToCart} />
-      </div>
-    );
-  }
-}
-
-export default MenuItem;*/

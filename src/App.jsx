@@ -1,4 +1,3 @@
-//import React from "react";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Basket from "./components/Basket";
@@ -6,17 +5,6 @@ import menuItems from "./MenuItems";
 import round2Decimal from "./Utility";
 import "./App.css";
 
-/*function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Menu menuItems={menuItems}/>
-      <Basket />
-    </div>
-  );
-}
-
-export default App;*/
 import React, { Component } from "react";
 
 export class App extends Component {
@@ -29,7 +17,7 @@ export class App extends Component {
     };
   }
 
-  //testing to check if it works
+  //add menu item to basket
   addToBasket = (item) => {
     let matchedIndex = this.state.cartItems.findIndex(
       (cartitem) => cartitem.item.id === item.id
@@ -38,7 +26,7 @@ export class App extends Component {
       const cartItem = {
         item: item,
         qty: 1,
-        price: item.price
+        price: item.price,
       };
       this.setState({
         cartItems: [...this.state.cartItems, cartItem],
@@ -48,7 +36,6 @@ export class App extends Component {
       let cartItemsCopy = [...this.state.cartItems];
       let matchedCartItem = cartItemsCopy[matchedIndex];
       matchedCartItem.qty += 1;
-      console.log(matchedCartItem);
       matchedCartItem.price = matchedCartItem.item.price * matchedCartItem.qty;
       this.setState({
         cartItems: [...cartItemsCopy],
@@ -66,22 +53,23 @@ export class App extends Component {
     });
   };
 
-  updateCart = (event, cartItemToUpdate) =>{
+  updateCart = (event, cartItemToUpdate) => {
     let matchedIndex = this.state.cartItems.findIndex(
       (cartItem) => cartItem.item.id === cartItemToUpdate.item.id
     );
 
     let cartItemsCopy = [...this.state.cartItems];
     let matchedCartItem = cartItemsCopy[matchedIndex];
-    matchedCartItem.qty = Number(event.target.value);
+    matchedCartItem.qty = Number(event.target.value); //event.target.value is updated quantity of the item in cart
     let prevMatchedCartItemPrice = matchedCartItem.price;
     matchedCartItem.price = matchedCartItem.item.price * matchedCartItem.qty;
-    console.log(matchedCartItem);
     this.setState({
       cartItems: [...cartItemsCopy],
-      total: round2Decimal(this.state.total - prevMatchedCartItemPrice + matchedCartItem.price),
+      total: round2Decimal(
+        this.state.total - prevMatchedCartItemPrice + matchedCartItem.price
+      ),
     });
-  }
+  };
 
   render() {
     return (
