@@ -10,7 +10,7 @@ function Header() {
       </div>
 
       <div className="rightSide">
-        <a href="#">Sign In/ Sign Up</a>
+        <a href="../../public/index.html">Sign In/ Sign Up</a>
         <button className="cartBtn">cart icon</button>
       </div>
     </div>
